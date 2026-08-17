@@ -1,4 +1,4 @@
-FROM openjdk:17-jdk-slim
+FROM amazoncorretto:17-alpine-jdk
 ARG JAR_FILE=target/clinica_veterinaria-0.0.1.jar
 COPY ${JAR_FILE} app_veterinaria.jar
 EXPOSE 8080
