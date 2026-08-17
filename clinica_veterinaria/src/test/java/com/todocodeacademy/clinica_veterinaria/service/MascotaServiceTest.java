@@ -7,6 +7,7 @@ import com.todocodeacademy.clinica_veterinaria.repository.IMascotaRepository;
 import java.util.List;
 import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -95,8 +96,8 @@ class MascotaServiceTest {
         assertEquals(1, resultado.size());
         assertEquals("Rex", resultado.get(0).getNombre());
         assertTrue(resultado.contains(caniche));
-        assertTrue(!resultado.contains(perroOtroRaza));
-        assertTrue(!resultado.contains(otroEspecie));
+        assertFalse(resultado.contains(perroOtroRaza));
+        assertFalse(resultado.contains(otroEspecie));
     }
 
     @Test
