@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+  namespace: clinica-vet
+data:
+  DB_URL: "jdbc:mysql://clinica-vet-mysql:3306/clinica_veterinaria?createDatabaseIfNotExist=true&serverTimezone=UTC"
+  DB_USER_NAME: "root"
